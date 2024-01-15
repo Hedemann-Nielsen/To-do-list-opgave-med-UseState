@@ -1,0 +1,9 @@
+@use "../../style/variables.scss";
+
+.label {
+	margin: 160px auto;
+	width: 543px;
+	height: 759px;
+	flex-shrink: 0;
+	background-color: variables.$color-yellow;
+}

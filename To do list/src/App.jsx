@@ -1,6 +1,5 @@
 import './App.scss'
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
+
 import { Home } from "./pages/Home/Home";
 // import { Products } from "./pages/Products/Products";
 // import { About } from "./pages/Abouut/About";
@@ -13,7 +12,6 @@ function App() {
 
   return (
     <>
-    <Header></Header>
                 <Routes>
             <Route index element={<Home />} />
             {/* <Route path="/products" element={<Products />} /> */}
@@ -21,7 +19,6 @@ function App() {
             {/* <Route path="/contact" element={<Contact />} /> */}
             {/* <Route path="/jobs" element={<Jobs />} /> */}
           </Routes>
-          <Footer></Footer>
     </>
   )
 }
