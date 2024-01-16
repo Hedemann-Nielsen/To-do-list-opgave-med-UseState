@@ -1,6 +1,51 @@
-.list {
-	padding-left: 92px;
-	li {
-		// list-style: none;
+.listSection {
+	display: flex;
+	.list {
+		padding-left: 40px;
+		list-style: none;
+	}
+	.rightSide {
+		border-left: 1px solid black;
+		height: 300px;
+		margin-left: 120px;
+		padding-left: 10px;
+		.listItem {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 50px;
+		}
+	}
+}
+
+.addNewSection {
+	align-items: left;
+	padding-left: 380px;
+	.button {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	.addItem {
+		text-decoration: none;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		// padding-left: 360px;
+		input {
+			background-color: transparent;
+			border-radius: 12px;
+			padding: 10px;
+			width: 150px;
+		}
+		button {
+			background-color: transparent;
+			border: none;
+			text-decoration: none;
+			text-align: left;
+		}
 	}
 }

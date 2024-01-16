@@ -1,9 +1,12 @@
 @use "../../style/variables.scss";
-
+.listSection {
+	display: grid;
+	grid-template-columns: 2fr, 1fr;
+}
 .label {
-	margin: 160px auto;
+	margin: 80px auto;
 	width: 543px;
-	height: 759px;
+	height: 600px;
 	flex-shrink: 0;
 	background-color: variables.$color-yellow;
 }

@@ -1,26 +1,32 @@
-import './App.scss'
-
+import './App.scss';
 import { Home } from "./pages/Home/Home";
-// import { Products } from "./pages/Products/Products";
-// import { About } from "./pages/Abouut/About";
-// import { Contact } from "./pages/Contact/Contact";
-// import { Jobs } from "./pages/Jobs/Jobs";
-import { Routes, Route } from 'react-router-dom'
+import { Done } from './pages/Done/done';
+import { InProgress } from './pages/In Progress/InProgress';
+import { Routes, Route } from 'react-router-dom';
+
+const arrRoutes = [
+  { title: "home", url: "/home", element: <Home />, visible: true },
+  { title: "in progress", url: "/in_progress", element: <Done />, visible: true },
+  { title: "done", url: "/done", element: <InProgress />, visible: true },
+];
 
 function App() {
-  
-
   return (
     <>
-                <Routes>
-            <Route index element={<Home />} />
-            {/* <Route path="/products" element={<Products />} /> */}
-            {/* <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/contact" element={<Contact />} /> */}
-            {/* <Route path="/jobs" element={<Jobs />} /> */}
-          </Routes>
+      <Routes>
+      <Route index element={<Home />} />
+
+        {arrRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.url}
+            element={route.element}
+          />
+          
+        ))}
+      </Routes>
     </>
-  )
+  );
 }
 
 export default App;
